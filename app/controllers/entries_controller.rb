@@ -12,7 +12,7 @@ class EntriesController < ApplicationController
   
     
     def index
-      @entries = Entry.all
+      @entries = Entry.all.order(date: :desc)
       render json: @entries
     end
   

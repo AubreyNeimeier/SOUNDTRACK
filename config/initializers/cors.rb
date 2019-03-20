@@ -14,3 +14,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
+
+# origins 'http://localhost:3001/entries'
+# not comfortable with wildcard because it is bad practice to all requests from all origins. 
+# 

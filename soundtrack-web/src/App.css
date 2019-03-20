@@ -23,6 +23,15 @@
   color: #61dafb;
 }
 
+.past-entry-box {
+  text-align: center;
+  background-color: #ffcccc;
+  width:500px;
+  height:auto;
+  border:1px;
+  border-color: black
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

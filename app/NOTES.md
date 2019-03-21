@@ -5,13 +5,17 @@ https://medium.com/@Nicholson85/handling-cors-issues-in-your-rails-api-120dfbcb8
     -application.rb
 
 - controller actions
-    currently they are /redirecting to page views. we don't want to do this....rather we want to render json that contains information we can use to set state. 
+    - currently they are /redirecting to page views. we don't want to do this....rather we want to render json that contains information we can use to set state. 
     -example flow for signing up new user 
         -new user fills in form on react front end
         - we make a post request to users/ (which routes them to users#create action)
         - the create action saves info to database and sends JSON info back to react front end REDUCER
-        - here we would dispatch an action such as type: LOGIN, with data. We set the state user_id to use in subsequent actions. Then      we could render a specific route such as /entries --- where we load entries in component did mount. 
+        - here we would dispatch an action such as {type: LOGIN, with data} . We set the state user_id to use in that reducer action
+        - the final step in the action would me redirect with a push action from react-router-redux. see resource (https://stackoverflow.com/questions/35706835/react-router-redirect-after-action-redux)
         
+    - we will never user NEW controller action because we aren't rendering and forms from api. we will use create, update, and delete   actions tho
+
+- will we even need sessions controller? yes--to send/assign user to state. 
 
 USEFUL REFERENCES
     -how to use react-router (https://reacttraining.com/react-router/)

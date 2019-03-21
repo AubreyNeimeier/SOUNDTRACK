@@ -18,7 +18,8 @@ class SessionsController < ApplicationController
         if user && user.authenticate(params[:user][:password])
             session[:user_id] = user.id
             @user = user
-            redirect_to user_path(@user)
+            # redirect_to user_path(@user)
+            #render @user in json
         else
             @user = User.last
             redirect_to login_path

@@ -34,7 +34,7 @@ REQUIREMENTS
 
         Goals (for nuggets) on 3/20
             -create users table and model and modify entries to include user_id. modify seed data
-            -build login input form
+            -build login input form (login with credentials--not oauth)
             -build login action
 
 

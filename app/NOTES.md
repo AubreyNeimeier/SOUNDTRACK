@@ -12,7 +12,29 @@ HOW TO BUILD OUT THIS APP
     -give priority to FUNCTION and PROJECT REQUIREMENTS FIRST
     -Do NOT build out spotify connectivity until minimum requirements met first
     -before beginning each nugget - identify a goal - based on requirements
+    - styling last -- and integrate react-bootstrap before trying to write CSS from scratch
 
 
 REQUIREMENTS
-    - 
+    - 2 container components
+        -entries container
+        -welcome container
+    - 5 stateless components
+        - entry
+        - entryInput
+        - entryList
+        - LoginInput
+        - about/welcome
+    - 3 Routes
+        - '/'
+        - '/entries' 
+        - '/entries/:entryId'
+
+
+
+        Goals (for nuggets) on 3/20
+            -create users table and model and modify entries to include user_id. modify seed data
+            -build login input form
+            -build login action
+
+

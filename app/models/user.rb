@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_many :entries 
     # has_many :tasks, through: :events
-    # has_secure_password 
+    has_secure_password 
     validates :username, presence: true
     validates :username, uniqueness: true
     # validates :password, presence: true

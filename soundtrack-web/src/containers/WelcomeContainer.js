@@ -26,12 +26,11 @@ class WelcomeContainer extends Component{
 
 }
 
-// const mapStateToProps = (state) => {
-//     // debugger
-//     return {entries: state.entries}
+const mapStateToProps = (state) => {
+    return {}
 
-// }
+}
 
 const mapDispatchToProps = dispatch => bindActionCreators({login}, dispatch)
 
-export default connect(mapDispatchToProps)(WelcomeContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(WelcomeContainer)

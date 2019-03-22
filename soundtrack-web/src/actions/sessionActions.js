@@ -11,9 +11,8 @@
             password: state.password
        })
     }  
-    debugger
         return dispatch => {
-            fetch(`http://localhost:3001/sessions`, data)
+            fetch(`http://localhost:3001/sessions`, data)   
             .then(response => response.json())
             .then(session_info => dispatch({
                 type: 'LOGIN_WITH_CREDENTIALS',

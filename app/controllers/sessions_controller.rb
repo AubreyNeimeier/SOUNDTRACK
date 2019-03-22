@@ -13,16 +13,18 @@ class SessionsController < ApplicationController
     end
 
     def login_with_credentials
-        user = User.find_by(username: params[:user][:username])
         
-        if user && user.authenticate(params[:user][:password])
+        user = User.find_by(username: params[:username])
+        binding.pry
+        
+        if user && user.authenticate(params[:password])
             session[:user_id] = user.id
             @user = user
             # redirect_to user_path(@user)
-            #render @user in json
+            render json: @user, status: 200
         else
             @user = User.last
-            redirect_to login_path
+            render json: @user, status: 200
         end
     
     end

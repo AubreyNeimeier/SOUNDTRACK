@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+
 
  class EntryInput extends Component{
     state = {
@@ -36,5 +36,5 @@ import { connect } from 'react-redux'
 
 }
 
-export default connect()(EntryInput)
+export default EntryInput
 //the current state(form values) is sent to postEntry, which is an action we imported. the action posts data and generates data with the create action, and entries db is updated

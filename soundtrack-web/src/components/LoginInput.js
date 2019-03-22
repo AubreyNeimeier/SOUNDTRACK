@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-
 
  class LoginInput extends Component{
     state = {
@@ -16,8 +14,7 @@ import { connect } from 'react-redux'
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
-        
+        e.preventDefault()        
         this.props.login(this.state)
         this.setState({
             [e.target.name]: ""
@@ -38,5 +35,5 @@ import { connect } from 'react-redux'
 
 }
 
-export default connect()(LoginInput)
+export default LoginInput
 //the current state(form values) is sent to postEntry, which is an action we imported. the action posts data and generates data with the create action, and entries db is updated

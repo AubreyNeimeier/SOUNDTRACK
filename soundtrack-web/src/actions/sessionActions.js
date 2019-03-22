@@ -1,4 +1,5 @@
   export const login = state => {
+    
     let data = {
       method: 'POST',
       headers: {
@@ -10,6 +11,7 @@
             password: state.password
        })
     }  
+    debugger
         return dispatch => {
             fetch(`http://localhost:3001/sessions`, data)
             .then(response => response.json())

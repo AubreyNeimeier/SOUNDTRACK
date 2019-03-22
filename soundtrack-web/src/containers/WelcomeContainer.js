@@ -6,15 +6,17 @@ import { fetchEntries, createEntry } from '../actions/entryActions';
 // import EntryInput from '../components/EntryInput'
 
 import LoginInput from '../components/LoginInput'
- class EntriesContainer extends Component{
-    
-    // handleChange = () => {
-    //     this.props.fetchEntries()
-    // }
-   
+
+
+class WelcomeContainer extends Component{
+
+// handleChange = () => {
+//     this.props.fetchEntries()
+// }
+
 
     render() {
-   
+
         return (
             <div>
                 <LoginInput  login={this.props.login}/>     

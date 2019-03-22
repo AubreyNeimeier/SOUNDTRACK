@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 
- class EntryInput extends Component{
+ class LoginInput extends Component{
     state = {
-        entryContent: " "
+        username: " ",
+        password: " "
     }
 
     handleChange = (e) => {
         this.setState({
-            entryContent: e.target.value
+            [e.target.name]: e.target.value
         })
 
     }
@@ -18,17 +19,17 @@ import { connect } from 'react-redux'
         
         this.props.createEntry(this.state)
         this.setState({
-            entryContent: " "
+            [e.target.name]: " "
         })
     }
     render() {
         const { entries } = this.props
-        console.log("entries", entries)
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <textarea type="text" rows="20" name="entry" cols="50" value={this.state.entryContent} onChange={this.handleChange}/>
-                    <input type="submit" value="Save" />
+                    <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
+                    <input type="text" name="password" value={this.state.password} onChange={this.handleChange}/>
+                    <input type="submit" value="Login" />
                 </form>
             </div>
         )
@@ -36,5 +37,5 @@ import { connect } from 'react-redux'
 
 }
 
-export default connect()(EntryInput)
+export default connect()(LoginInput)
 //the current state(form values) is sent to postEntry, which is an action we imported. the action posts data and generates data with the create action, and entries db is updated

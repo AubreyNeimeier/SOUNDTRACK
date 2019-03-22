@@ -23,7 +23,7 @@ import { connect } from 'react-redux'
     }
     render() {
         const { entries } = this.props
-        console.log("entries", entries)
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>

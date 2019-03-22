@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 import EntriesContainer from './containers/EntriesContainer';
+import WelcomeContainer from './containers/WelcomeContainer';
 
 
 class App extends Component {
@@ -10,6 +11,7 @@ class App extends Component {
       <div className="App">
         Here is your home page!
         <EntriesContainer />
+        <WelcomeContainer />
       </div>
     );
   }

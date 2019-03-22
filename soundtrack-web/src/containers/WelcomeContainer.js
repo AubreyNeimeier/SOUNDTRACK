@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { fetchEntries, createEntry } from '../actions/entryActions';
+import { login } from '../actions/sessionActions';
 // import EntryInput from '../components/EntryInput'
 
 import LoginInput from '../components/LoginInput'
@@ -19,8 +19,7 @@ class WelcomeContainer extends Component{
 
         return (
             <div>
-                <LoginInput  login={this.props.login}/>     
-
+                <LoginInput login={this.props.login}/>     
             </div>
         )
     }

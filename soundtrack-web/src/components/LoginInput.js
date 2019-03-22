@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import 
+
 
  class LoginInput extends Component{
     state = {
-        username: " ",
-        password: " "
+        username: "",
+        password: ""
     }
 
     handleChange = (e) => {
@@ -18,18 +18,18 @@ import
     handleSubmit = (e) => {
         e.preventDefault()
         
-        this.props.createEntry(this.state)
+        this.props.login(this.state)
         this.setState({
-            [e.target.name]: " "
+            [e.target.name]: ""
         })
     }
     render() {
-        const { entries } = this.props
+
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="username" value={this.state.username} onChange={this.handleChange}/>
-                    <input type="text" name="password" value={this.state.password} onChange={this.handleChange}/>
+                    <label>Username</label><input type="text"  name="username" value={this.state.username} onChange={this.handleChange}/><br></br>
+                    <label>Password</label><input type="password"  name="password" value={this.state.password} onChange={this.handleChange}/>
                     <input type="submit" value="Login" />
                 </form>
             </div>

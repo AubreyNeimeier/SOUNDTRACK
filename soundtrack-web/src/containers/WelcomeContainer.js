@@ -34,4 +34,4 @@ class WelcomeContainer extends Component{
 
 const mapDispatchToProps = dispatch => bindActionCreators({login}, dispatch)
 
-export default connect(mapStateToProps,mapDispatchToProps)(LoginContainer)
+export default connect(mapDispatchToProps)(WelcomeContainer)

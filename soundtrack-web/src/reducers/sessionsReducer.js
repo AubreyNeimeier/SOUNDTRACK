@@ -13,10 +13,11 @@ const initialState = {
         case 'LOGIN_WITH_CREDENTIALS':
             
           return {...state, session: action.payload.username}
-          
       default: return state
       
     }
     console.log(state)
+    //isn't console.logging here
+    //we need to check the state
   }
   //left of defining case and add_entry - need to combine reducers as well and define in index.js

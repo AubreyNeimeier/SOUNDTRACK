@@ -13,10 +13,7 @@ class SessionsController < ApplicationController
     end
 
     def login_with_credentials
-        
         user = User.find_by(username: params[:username])
-        binding.pry
-        
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id
             @user = user

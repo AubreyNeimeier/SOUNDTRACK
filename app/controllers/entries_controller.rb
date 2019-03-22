@@ -6,7 +6,7 @@ class EntriesController < ApplicationController
     # if we ommited the render :json we would get a 'missingtemplate' error
     def create
       @entry = Entry.create(entry_params)
-
+      binding.pry
       render json: @entry, status: 200
     end
   

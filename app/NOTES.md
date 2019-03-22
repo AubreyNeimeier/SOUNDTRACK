@@ -16,6 +16,7 @@ https://medium.com/@Nicholson85/handling-cors-issues-in-your-rails-api-120dfbcb8
     - we will never user NEW controller action because we aren't rendering and forms from api. we will use create, update, and delete   actions tho
 
 - will we even need sessions controller? yes--to send/assign user to state. 
+- UNCOMMENT entry.rb belongs_to :user 
 
 USEFUL REFERENCES
     -how to use react-router (https://reacttraining.com/react-router/)

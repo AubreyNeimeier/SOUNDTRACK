@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import './App.css';
 import EntriesContainer from './containers/EntriesContainer';
 import WelcomeContainer from './containers/WelcomeContainer';
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 
 class App extends Component {
   render() {
@@ -11,7 +11,8 @@ class App extends Component {
       <Router>
       <div className="App">
         Here is your home page!
-        <EntriesContainer />
+        <Route path="/entries" component={EntriesContainer}/>
+        
         <WelcomeContainer />
       </div>
       </Router>

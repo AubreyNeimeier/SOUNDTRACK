@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
             # redirect_to user_path(@user)
             render json: @user, status: 200
         else
-            @user = User.last
+            @user = User.new
             render json: @user, status: 200
         end
        

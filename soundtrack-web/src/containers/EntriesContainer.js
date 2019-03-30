@@ -11,10 +11,14 @@ import EntryList from '../components/EntryList'
 // does fetchEntries import correctly? 
 
  class EntriesContainer extends Component{
-    
-    handleChange = () => {
+
+    componentDidMount = () => {
         this.props.fetchEntries()
     }
+    
+    // handleChange = () => {
+    //     this.props.fetchEntries()
+    // }
    
 
     render() {
@@ -22,7 +26,7 @@ import EntryList from '../components/EntryList'
         return (
             <div>
                 <EntryInput  createEntry={this.props.createEntry}/>
-                <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button >
+                {/* <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button > */}
                 <EntryList entries={this.props.entries} /> 
 
             </div>

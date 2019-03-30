@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
 
     def login_with_credentials
         user = User.find_by(username: params[:username])
+        
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id
             @user = user
@@ -23,7 +24,7 @@ class SessionsController < ApplicationController
             @user = User.last
             render json: @user, status: 200
         end
-    
+       
     end
 
 

@@ -6,18 +6,22 @@ const initialState = {
   }
   
   export default function sessionsReducer(state = initialState, action) {
-  
+    debugger
     switch(action.type) {
      
 
         case 'LOGIN_WITH_CREDENTIALS':
             
           return {...state, session: action.payload.username}
+
+        case 'LOGIN_WITH_OAUTH':
+
       default: return state
       
     }
     console.log(state)
     //isn't console.logging here
     //we need to check the state
+    debugger
   }
-  //left of defining case and add_entry - need to combine reducers as well and define in index.js
+  //left off defining case and add_entry - need to combine reducers as well and define in index.js

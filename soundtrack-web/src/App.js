@@ -3,16 +3,18 @@ import React, { Component } from 'react';
 import './App.css';
 import EntriesContainer from './containers/EntriesContainer';
 import WelcomeContainer from './containers/WelcomeContainer';
-
+import { BrowserRouter as Router } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
+      <Router>
       <div className="App">
         Here is your home page!
         <EntriesContainer />
         <WelcomeContainer />
       </div>
+      </Router>
     );
   }
 }

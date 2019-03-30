@@ -24,4 +24,4 @@ const initialState = {
     //we need to check the state
     debugger
   }
-  //left off defining case and add_entry - need to combine reducers as well and define in index.js
+  //left off researching how to redirect in an action after proper authentication (session contains username)

@@ -41,8 +41,8 @@ REQUIREMENTS
         - about/welcome
     - 3 Routes
         - '/'
-        - '/entries' 
-        - '/entries/:entryId'
+        - '/:userId/entries' 
+        - '/:userId/entries/:entryId'
 
 
 

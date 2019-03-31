@@ -6,7 +6,7 @@ const initialState = {
   }
   
   export default function sessionsReducer(state = initialState, action) {
-    debugger
+    
     switch(action.type) {
      
 
@@ -22,6 +22,6 @@ const initialState = {
     console.log(state)
     //isn't console.logging here
     //we need to check the state
-    debugger
+    
   }
   //left off researching how to redirect in an action after proper authentication (session contains username)

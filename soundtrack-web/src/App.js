@@ -13,6 +13,8 @@ class App extends Component {
         Here is your home page!
         <Route path="/entries" component={EntriesContainer}/>
         
+       
+        
         <WelcomeContainer />
       </div>
       </Router>

@@ -23,6 +23,13 @@
   color: #61dafb;
 }
 
+p.preview {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 2000px;
+}
+
 .past-entry-box {
   text-align: center;
   background-color: #ffcccc;

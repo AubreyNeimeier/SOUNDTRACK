@@ -1,14 +1,17 @@
 import React from 'react'
-import Entry from './Entry'
+import EntryPreview from './EntryPreview'
 
-const EntryList = props => {
 
-        const entryList = props.entries.entries.map(entry => <Entry entry={entry} key={entry.id} />)
+const EntryList = (props) => {
+
+        const entryList = props.entries.entries.map(entry => <div><EntryPreview entry={entry} key={entry.id} /></div>)
         return (
+            
             <div>
                 <ul>
                 {entryList}
                 </ul>
+                
             </div>
         )
     }

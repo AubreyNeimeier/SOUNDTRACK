@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom'
 
  class LoginInput extends Component{
     state = {
         username: "",
-        password: ""
+        password: "", 
+
     }
 
     handleChange = (e) => {
@@ -16,11 +18,12 @@ import React, { Component } from 'react';
     handleSubmit = (e) => {
         e.preventDefault()        
         this.props.login(this.state)
-        this.setState({
-            [e.target.name]: ""
-        })
     }
     render() {
+
+        if (this.state.session) {
+            return <Redirect to='/entries'/>
+        }
 
         return (
             <div>

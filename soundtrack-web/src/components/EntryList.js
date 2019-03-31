@@ -4,6 +4,7 @@ import EntryPreview from './EntryPreview'
 
 const EntryList = (props) => {
 
+debugger
         const entryList = props.entries.entries.map(entry => <div><EntryPreview entry={entry} key={entry.id} /></div>)
         return (
             

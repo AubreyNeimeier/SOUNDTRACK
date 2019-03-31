@@ -10,12 +10,8 @@ class App extends Component {
     return (
       <Router>
       <div className="App">
-        Here is your home page!
         <Route exact={true} path="/" component={WelcomeContainer} />
         <Route exact={true} path="/entries" component={EntriesContainer}/>
-        
-        
-        <WelcomeContainer />
       </div>
       </Router>
     );

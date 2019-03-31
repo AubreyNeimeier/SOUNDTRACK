@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
  class EntryInput extends Component{
     state = {
-        entryContent: " "
+        entryContent: "write your thoughts, memories, concerns, inspirations etc here...."
     }
 
     handleChange = (e) => {
@@ -27,6 +27,7 @@ import React, { Component } from 'react';
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
+                    <label id="entry-input-label"> New Entry </label>
                     <textarea type="text" rows="20" name="entry" cols="50" value={this.state.entryContent} onChange={this.handleChange}/>
                     <input type="submit" value="Save" />
                 </form>

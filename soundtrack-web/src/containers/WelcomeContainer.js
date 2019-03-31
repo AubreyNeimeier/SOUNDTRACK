@@ -6,7 +6,7 @@ import { login } from '../actions/sessionActions';
 // import EntryInput from '../components/EntryInput'
 
 import LoginInput from '../components/LoginInput'
-import SignupInput from '../componenets/SignupInput'
+import SignupInput from '../components/SignupInput'
 
 
 

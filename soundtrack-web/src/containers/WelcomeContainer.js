@@ -6,7 +6,7 @@ import { login } from '../actions/sessionActions';
 // import EntryInput from '../components/EntryInput'
 
 import LoginInput from '../components/LoginInput'
-
+import SignupInput from '../componenets/SignupInput'
 
 
 
@@ -21,7 +21,8 @@ class WelcomeContainer extends Component{
 
         return (
             <div>
-                <LoginInput login={this.props.login}/>     
+                <LoginInput login={this.props.login}/>  
+                <SignupInput />   
             </div>
         )
     }

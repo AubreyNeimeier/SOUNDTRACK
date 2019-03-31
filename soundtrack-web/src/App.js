@@ -11,9 +11,9 @@ class App extends Component {
       <Router>
       <div className="App">
         Here is your home page!
-        <Route path="/entries" component={EntriesContainer}/>
+        <Route exact={true} path="/" component={WelcomeContainer} />
+        <Route exact={true} path="/entries" component={EntriesContainer}/>
         
-       
         
         <WelcomeContainer />
       </div>

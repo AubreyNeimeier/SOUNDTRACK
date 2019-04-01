@@ -2,7 +2,7 @@ import React from 'react'
 import EntryPreview from './EntryPreview'
 
 
-const EntryList = (props) => {
+const EntryListPreview = (props) => {
 
 debugger
         const entryList = props.entries.entries.map(entry => <div><EntryPreview entry={entry} key={entry.id} /></div>)
@@ -17,4 +17,4 @@ debugger
         )
     }
 
-export default EntryList
+export default EntryListPreview

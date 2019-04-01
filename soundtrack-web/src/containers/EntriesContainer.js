@@ -6,7 +6,7 @@ import { fetchEntries, createEntry } from '../actions/entryActions';
 import EntryInput from '../components/EntryInput'
 
 
-import EntryList from '../components/EntryList'
+import EntryListPreview from '../components/EntryListPreview'
 
 // does fetchEntries import correctly? 
 
@@ -27,7 +27,7 @@ import EntryList from '../components/EntryList'
             <div>
                 <EntryInput  createEntry={this.props.createEntry}/>
                 {/* <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button > */}
-                <EntryList entries={this.props.entries} /> 
+                <EntryListPreview entries={this.props.entries} /> 
 
             </div>
         )

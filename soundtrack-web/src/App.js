@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import './App.css';
 import EntriesContainer from './containers/EntriesContainer';
 import WelcomeContainer from './containers/WelcomeContainer';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import Entry from './components/Entry';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
       <div className="App">
         <Route exact={true} path="/" component={WelcomeContainer} />
         <Route exact={true} path="/entries" component={EntriesContainer}/>
+        {/* <Route exact={true} path={`entries/${entryId}`} component={Entry} /> */}
       </div>
       </Router>
     );

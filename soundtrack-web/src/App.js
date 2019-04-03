@@ -6,18 +6,19 @@ import WelcomeContainer from './containers/WelcomeContainer';
 import EntryShow from './components/EntryShow'
 
 
-import { BrowserRouter, Route, withRouter } from 'react-router-dom'
+import { BrowserRouter, Route, withRouter, Switch } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
         <div> 
-          <Route  exact={true} path="/" component={WelcomeContainer} />
-          <Route  exact={true} path="/entries" component={EntriesContainer}/>
-          <Route path={`/fake/13`} render={routerProps => <EntryShow {...routerProps} />}/>
+          <Switch>
+            <Route  exact path="/" component={WelcomeContainer} />
+            <Route  exact path="/entries" component={EntriesContainer}/>
+            <Route path={`/entries/:entryId`} render={routerProps => <EntryShow {...routerProps} />}/>
+          </Switch>
         </div>
-      </BrowserRouter>
+
     );
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const EntryShow = ({match}) => {
-    debugger
+    
    return(
        <div>
        <h1> THIS IS ENTRY SHOW COMPONENT </h1>

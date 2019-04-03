@@ -22,7 +22,6 @@ import React, { Component } from 'react';
         })
     }
     render() {
-        const { entries } = this.props
 
         return (
             <div>

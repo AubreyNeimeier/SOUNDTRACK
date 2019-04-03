@@ -3,36 +3,25 @@ import React, { Component } from 'react';
 import './App.css';
 import EntriesContainer from './containers/EntriesContainer';
 import WelcomeContainer from './containers/WelcomeContainer';
-import Entry from './components/Entry';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import EntryShow from './components/EntryShow'
+
+
+import { BrowserRouter, Route, withRouter } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
-      <Router>
-      <div className="App">
-        <Route exact={true} path="/" component={WelcomeContainer} />
-        <Route exact={true} path="/entries" component={EntriesContainer}/>
-        {/* <Route exact={true} path={`entries/${entryId}`} component={Entry} /> */}
-      </div>
-      </Router>
+      <BrowserRouter>
+        <div> 
+          <Route  exact={true} path="/" component={WelcomeContainer} />
+          <Route  exact={true} path="/entries" component={EntriesContainer}/>
+          <Route path={`/fake/13`} render={routerProps => <EntryShow {...routerProps} />}/>
+        </div>
+      </BrowserRouter>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
 
-{/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-</header> */}
+

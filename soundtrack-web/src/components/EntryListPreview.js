@@ -2,10 +2,11 @@ import React from 'react'
 import EntryPreview from './EntryPreview'
 
 
+
 const EntryListPreview = (props) => {
 
-debugger
-        const entryList = props.entries.entries.map(entry => <div><EntryPreview entry={entry} key={entry.id} /></div>)
+
+        const entryList = props.entries.entries.map(entry => <EntryPreview entry={entry} key={entry.id} />)
         return (
             
             <div>

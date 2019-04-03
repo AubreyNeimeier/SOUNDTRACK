@@ -4,18 +4,24 @@ import './App.css';
 import EntriesContainer from './containers/EntriesContainer';
 import WelcomeContainer from './containers/WelcomeContainer';
 import EntryShow from './components/EntryShow'
-
+import { fetchEntries } from './actions/entryActions';
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
 import { BrowserRouter, Route, withRouter, Switch } from 'react-router-dom'
 
 class App extends Component {
+ componentDidMount = () => {
+        this.props.fetchEntries()
+    }
+
   render() {
     return (
         <div> 
           <Switch>
             <Route  exact path="/" component={WelcomeContainer} />
-            <Route  exact path="/entries" component={EntriesContainer}/>
-            <Route path={`/entries/:entryId`} render={routerProps => <EntryShow {...routerProps} />}/>
+            <Route  exact path="/entries" render={() => <EntriesContainer entries={this.props.entries}/>}/>
+            <Route path={`/entries/:entryId`} render={routerProps => <EntryShow {...routerProps} entries={this.props.entries} />}/>
           </Switch>
         </div>
 
@@ -23,6 +29,16 @@ class App extends Component {
   }
 }
 
-export default withRouter(App);
+
+
+const mapStateToProps = (state) => {
+
+  return {entries: state.entries}
+
+}
+
+const mapDispatchToProps = dispatch => bindActionCreators({fetchEntries}, dispatch)
+
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(App))
 
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { fetchEntries, createEntry } from '../actions/entryActions';
+import { createEntry } from '../actions/entryActions';
 import EntryInput from '../components/EntryInput'
 import EntryShow from '../components/EntryShow'
 import { Route } from 'react-router-dom'
@@ -12,9 +12,9 @@ import EntryListPreview from '../components/EntryListPreview'
 
  class EntriesContainer extends Component{
 
-    componentDidMount = () => {
-        this.props.fetchEntries()
-    }
+    // componentDidMount = () => {
+    //     this.props.fetchEntries()
+    // }
     
     // handleChange = () => {
     //     this.props.fetchEntries()
@@ -41,7 +41,7 @@ const mapStateToProps = (state) => {
 
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({fetchEntries, createEntry}, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ createEntry }, dispatch)
 
 export default connect(mapStateToProps,mapDispatchToProps)(EntriesContainer)
 

@@ -4,6 +4,7 @@ import './App.css';
 import EntriesContainer from './containers/EntriesContainer';
 import WelcomeContainer from './containers/WelcomeContainer';
 import EntryShow from './components/EntryShow'
+import NavBar from './components/NavBar'
 import { fetchEntries } from './actions/entryActions';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -22,7 +23,7 @@ class App extends Component {
         <div className="app"> 
           <Switch>
             <Route  exact path="/" component={WelcomeContainer} />
-            <Route  exact path="/entries" render={() => <div><EntriesContainer entries={this.props.entries}/> <NavBar /></div> }/>
+            <Route  exact path="/entries" render={() => <div><NavBar /><EntriesContainer entries={this.props.entries}/> </div> }/>
             <Route path={`/entries/:entryId`} render={routerProps => <EntryShow {...routerProps} entries={this.props.entries} />}/>
           </Switch>
         </div>

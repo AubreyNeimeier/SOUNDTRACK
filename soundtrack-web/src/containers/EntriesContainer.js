@@ -24,7 +24,7 @@ import EntryListPreview from '../components/EntryListPreview'
     render() {
   
         return (
-            <div>
+            <div className="center-flex">
                 <EntryInput  createEntry={this.props.createEntry}/>
                 {/* <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button > */}
                 <EntryListPreview entries={this.props.entries} /> 

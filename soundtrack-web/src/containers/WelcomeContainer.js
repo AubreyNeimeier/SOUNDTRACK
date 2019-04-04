@@ -20,7 +20,7 @@ class WelcomeContainer extends Component{
     render() {
 
         return (
-            <div>
+            <div className="center-flex">
                 <LoginInput login={this.props.login}/>  
                 <SignupInput />   
             </div>

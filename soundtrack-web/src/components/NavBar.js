@@ -4,11 +4,11 @@ const NavBar = (props) => {
 
 
         return (
-            <div>
-                <NavLink to="/" activeClassName="selected" activeStyle={{fontWeight: "bold", color: "red" }}> Home </NavLink>
-                <NavLink to="/entries" activeClassName="selected" activeStyle={{fontWeight: "bold", color: "red" }}> Entries </NavLink>
-                <NavLink to="entries/new" activeClassName="selected" activeStyle={{fontWeight: "bold", color: "red" }}> New Entry </NavLink>
-                <NavLink to="/logout" activeClassName="selected" activeStyle={{fontWeight: "bold", color: "red" }}> Log Out </NavLink>           
+            <div className="Nav-Bar">
+                <NavLink to="/" className="Nav-Bar-Item" > Home </NavLink>
+                <NavLink to="/entries" className="Nav-Bar-Item" > Entries </NavLink>
+                <NavLink to="entries/new" className="Nav-Bar-Item" > New Entry </NavLink>
+                <NavLink to="/logout" className="Nav-Bar-Item" > Log Out </NavLink>           
             </div> 
         )
     }

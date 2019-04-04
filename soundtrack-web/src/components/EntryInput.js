@@ -24,11 +24,11 @@ import React, { Component } from 'react';
     render() {
 
         return (
-            <div>
+            <div className="center-flex">
                 <form onSubmit={this.handleSubmit}>
-                    <label id="entry-input-label"> New Entry </label>
-                    <textarea type="text" rows="20" name="entry" cols="50" value={this.state.entryContent} onChange={this.handleChange}/>
-                    <input type="submit" value="Save" />
+                    <label className="center-flex"> New Entry </label>
+                    <textarea type="text" rows="20" name="entry" cols="50" value={this.state.entryContent} onChange={this.handleChange}/><br></br>
+                    <input className="entry-button" type="submit" value="Save" />
                 </form>
             </div>
         )

@@ -34,15 +34,13 @@ REQUIREMENTS
         -entries container
         -welcome container
     - 5 stateless components
-        - entry
-        - entryInput
-        - entryList
-        - LoginInput
-        - about/welcome
+        - EntryShow
+        - EntryListPreview
+        - EntryPreview
     - 3 Routes
         - '/'
-        - '/:userId/entries' 
-        - '/:userId/entries/:entryId'
+        - '/entries' 
+        - '/entries/:entryId'
 
 
 

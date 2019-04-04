@@ -22,7 +22,7 @@ class App extends Component {
         <div className="app"> 
           <Switch>
             <Route  exact path="/" component={WelcomeContainer} />
-            <Route  exact path="/entries" render={() => <EntriesContainer entries={this.props.entries}/>}/>
+            <Route  exact path="/entries" render={() => <div><EntriesContainer entries={this.props.entries}/> <NavBar /></div> }/>
             <Route path={`/entries/:entryId`} render={routerProps => <EntryShow {...routerProps} entries={this.props.entries} />}/>
           </Switch>
         </div>

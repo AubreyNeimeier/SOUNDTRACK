@@ -6,6 +6,8 @@ import { createEntry } from '../actions/entryActions';
 import EntryInput from '../components/EntryInput'
 
 import EntryListPreview from '../components/EntryListPreview'
+import SoundtrackArt from '../components/SoundtrackArt';
+import NavBar from '../components/NavBar';
 
 // does fetchEntries import correctly? 
 
@@ -24,9 +26,12 @@ import EntryListPreview from '../components/EntryListPreview'
   
         return (
             <div className="center-flex">
+                <NavBar />
+                <SoundtrackArt />
                 <EntryInput  createEntry={this.props.createEntry}/>
                 {/* <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button > */}
                 <EntryListPreview entries={this.props.entries} /> 
+                
                 
             </div>
         )

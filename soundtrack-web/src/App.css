@@ -16,6 +16,12 @@
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
 }
+.art-background{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
 .Nav-Bar-Item {
   font-size: 20px;
@@ -61,7 +67,7 @@ a {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-input[type=text] {
+input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -87,12 +93,12 @@ p.preview {
 
 .past-entry-box-content {
   text-align: left;
-  background-color:#fff7dd;
+  background-color: rgb(172, 224, 167);
   width:500px;
   height:auto;
   margin: 20px;
   padding: 10px;
-  border: 2px solid rgb(153, 119, 74);
+  border: 2px solid rgb(172, 224, 167);
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }

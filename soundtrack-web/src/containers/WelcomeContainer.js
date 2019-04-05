@@ -9,6 +9,7 @@ import LoginInput from '../components/LoginInput'
 
 import About from '../components/About'
 import { NavLink } from 'react-router-dom'
+import SoundtrackArt from '../components/SoundtrackArt';
 
 
 
@@ -23,6 +24,7 @@ class WelcomeContainer extends Component{
 
         return (
             <div className="center-flex">
+                <SoundtrackArt />
                 <LoginInput login={this.props.login}/>  
                 <NavLink to="/signup"> Sign Up </NavLink>
                 <About />  

@@ -4,7 +4,6 @@ const SoundtrackArt = (props) => {
 
         return (
             <div className="art-background">
-            <p>SoundTrack</p>
             <img src={soundtrack} alt="soundtrack_img" height="576" width="1064px" align="left"/> 
             </div>         
         )

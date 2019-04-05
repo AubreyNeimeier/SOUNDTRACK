@@ -23,13 +23,15 @@ class App extends Component {
     return (
       
         <div className="app"> 
-          
-            <Route path="/" component={WelcomeContainer} />
+          <Switch>
+            <Route exact path="/" component={WelcomeContainer} />
+            <Route exact path="/about" component={About} />
             <Route exact path="/signup" component={SignupInput} />
+          </Switch>
             <Route path="/soundtrack" component={SoundtrackArt} />
             <Route path="/entries" render={() => <div><NavBar /><EntriesContainer entries={this.props.entries}/> </div> }/>
             <Route path={`/entries/:entryId`} render={routerProps => <EntryShow {...routerProps} entries={this.props.entries} />}/>
-            <Route exact path="/about" component={About} />
+            
           
         </div>
 

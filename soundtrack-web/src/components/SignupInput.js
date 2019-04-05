@@ -7,10 +7,11 @@ import { NavLink } from 'react-router-dom';
 
         return (
             <div class="center-flex">
+            <p> Sign Up to save journal entries </p>
                <form onSubmit={this.handleSubmit}>
-                    <label>Username</label><input type="text"  name="username" /><br></br>
+                    <label>Username</label><input type="text"  name="username" />
                     <label>Password</label><input type="password"  name="password" />
-                    <input type="submit" value="Login" />
+                    <input type="submit" value="Sign Up" />
                 </form>
 
                 <NavLink to="/"> Login </NavLink>

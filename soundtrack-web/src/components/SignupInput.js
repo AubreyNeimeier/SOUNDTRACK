@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
+import SoundtrackArt from './SoundtrackArt';
+
 
  class SignupInput extends Component{
  
     render() {
 
         return (
-            <div class="center-flex">
-            <p> Sign Up to save journal entries </p>
-               <form onSubmit={this.handleSubmit}>
-                    <label>Username</label><input type="text"  name="username" />
-                    <label>Password</label><input type="password"  name="password" />
-                    <input type="submit" value="Sign Up" />
-                </form>
+            <div>
+                    <SoundtrackArt />
+                <div class="center-flex">
+                    <p> Sign Up to save journal entries </p>
+                    <form onSubmit={this.handleSubmit}>
+                            <label>Username</label><input type="text"  name="username" />
+                            <label>Password</label><input type="password"  name="password" />
+                            <input type="submit" value="Sign Up" />
+                        </form>
 
-                <NavLink to="/"> Login </NavLink>
+                        <NavLink to="/"> Login </NavLink>
+                </div>
             </div>
         )
     }

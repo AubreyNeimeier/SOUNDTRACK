@@ -27,7 +27,7 @@ class WelcomeContainer extends Component{
                 <SoundtrackArt />
                 <LoginInput login={this.props.login}/>  
                 <NavLink to="/signup"> Sign Up </NavLink>
-                <About />  
+                
             </div>
         )
     }

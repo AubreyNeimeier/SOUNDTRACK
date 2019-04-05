@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
  class SignupInput extends Component{
  
     render() {
 
         return (
-            <div>
-                <h1> THIS IS OUR SIGNUPINPUT </h1>
+            <div class="center-flex">
+               <form onSubmit={this.handleSubmit}>
+                    <label>Username</label><input type="text"  name="username" /><br></br>
+                    <label>Password</label><input type="password"  name="password" />
+                    <input type="submit" value="Login" />
+                </form>
+
+                <NavLink to="/"> Login </NavLink>
             </div>
         )
     }

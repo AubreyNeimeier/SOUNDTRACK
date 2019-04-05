@@ -4,8 +4,7 @@ import { connect } from 'react-redux'
 
 import { createEntry } from '../actions/entryActions';
 import EntryInput from '../components/EntryInput'
-import EntryShow from '../components/EntryShow'
-import { Route } from 'react-router-dom'
+
 import EntryListPreview from '../components/EntryListPreview'
 
 // does fetchEntries import correctly? 

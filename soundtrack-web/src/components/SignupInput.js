@@ -36,9 +36,9 @@ import { bindActionCreators } from 'redux'
                 <div class="center-flex">
                     <p> Sign Up to save journal entries </p>
                     <form onSubmit={this.handleSubmit}>
-                            <label>Username</label><input type="text"  name="username" />
-                            <label>Password</label><input type="password"  name="password" />
-                            <label>Full Name</label><input type="text"  name="name" />
+                            <label>Username</label><input type="text"  name="username" onChange={this.handleChange}/>
+                            <label>Password</label><input type="password"  name="password" onChange={this.handleChange}/>
+                            <label>Full Name</label><input type="text"  name="name" onChange={this.handleChange}/>
                             <input type="submit" value="Sign Up" />
                         </form>
 

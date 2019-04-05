@@ -18,11 +18,9 @@ import { withRouter } from 'react-router-dom'
 
     handleSubmit = (e) => {
         e.preventDefault()        
-        this.props.login(this.state)
+        this.props.login(this.state, this.props.history.push('/entries'))
         // debugger
-        // if(this.state.session){
-        //     history.push('/entries')
-        // }
+        
     }
     render() {
 

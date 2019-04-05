@@ -19,10 +19,10 @@ class SessionsController < ApplicationController
             session[:user_id] = user.id
             @user = user
             # redirect_to user_path(@user)
-            render json: @user, status: 200
+            render json: { user: @user, logged_in: true }, status: 200
         else
             @user = User.new
-            render json: @user, status: 200
+            render json: { user: @user, logged_in: false }, status: 200
         end
        
     end

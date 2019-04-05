@@ -1,4 +1,4 @@
-  import { push } from 'react-router-redux'
+  //import { push } from 'react-router-redux'
   export const login = state => {
     
     let data = {
@@ -19,7 +19,7 @@
                 type: 'LOGIN_WITH_CREDENTIALS',
                 payload: session_info
             }))
-            .then(dispatch(push('/entries')))
+            // .then(dispatch(push('/entries')))
             .catch(err => err)
         }
         

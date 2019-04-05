@@ -1,10 +1,31 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import SoundtrackArt from './SoundtrackArt';
-
+import { signup } from '../actions/userActions'
 
  class SignupInput extends Component{
  
+    state = {
+        username: "",
+        password: "",
+        name: ""
+    }
+
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+
+    }
+
+    handleSubmit = (e) => {
+        e.preventDefault()        
+        this.props.signup(this.state)
+        // debugger
+        // if(this.state.session){
+        //     history.push('/entries')
+        // }
+    }
     render() {
 
         return (
@@ -15,6 +36,7 @@ import SoundtrackArt from './SoundtrackArt';
                     <form onSubmit={this.handleSubmit}>
                             <label>Username</label><input type="text"  name="username" />
                             <label>Password</label><input type="password"  name="password" />
+                            <label>Full Name</label><input type="text"  name="name" />
                             <input type="submit" value="Sign Up" />
                         </form>
 

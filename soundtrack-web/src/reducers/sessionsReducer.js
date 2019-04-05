@@ -1,15 +1,14 @@
 //this is good but we don't want to save data to the store... we want to post to our rails API 
 
 
-const initialState = {
-    session: []
-  }
-  
-  export default function sessionsReducer(state = initialState, action) {
 
+  export default function sessionsReducer(state = {session: []}, action) {
+    
     switch(action.type) {
+      
       case 'LOGIN_WITH_CREDENTIALS':
-        return {...state, session: action.payload.username}
+        
+        return {...state, session: [...state.session, action.payload.username]}
       case 'LOGIN_WITH_OAUTH':
 
     default: return state

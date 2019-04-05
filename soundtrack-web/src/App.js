@@ -29,6 +29,7 @@ class App extends Component {
             <Route exact path="/entries" render={() => <EntriesContainer entries={this.props.entries}/> }/>
             <Route exact path="/entries/new" component={EntryInput}/>
             <Route exact path={`/entries/:entryId`} render={routerProps => <EntryShow {...routerProps} entries={this.props.entries} />}/>
+            <Route exact path="/logout" />
         </Switch>   
           
         </div>

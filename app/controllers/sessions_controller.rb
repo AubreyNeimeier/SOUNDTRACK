@@ -28,6 +28,7 @@ class SessionsController < ApplicationController
     end
 
     def destroy
+        # binding.pry
         render json: {logged_in: false }, status: 200
     end
 

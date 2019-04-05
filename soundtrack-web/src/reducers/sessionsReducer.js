@@ -11,6 +11,9 @@
         return {...state, session: [...state.session, action.payload.username]}
       case 'LOGIN_WITH_OAUTH':
 
+      case 'LOGOUT':
+        return { session:[] }
+
     default: return state
       
     }

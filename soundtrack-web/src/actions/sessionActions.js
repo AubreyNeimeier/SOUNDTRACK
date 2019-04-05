@@ -29,6 +29,33 @@
         
     }
 
+    export const logout = (callback) => {
+    
+      let data = {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      }  
+          return dispatch => {
+              fetch(`http://localhost:3001/logout`)   
+              .then(response => response.json())
+              .then(session_info => {
+                dispatch({
+                  type: 'LOGOUT',
+                })
+                if(!!session_info.logged_in) callback()
+              })
+              // .then(dispatch(push('/entries')))
+              .catch(err => err)
+          }
+          
+      }
+    
+
+
+
   // export const addEntry = (entry) => {
   //   return {
   //     type: "ADD_ENTRY", 
@@ -38,26 +65,3 @@
 
 
 
-
-// const baseUrl = 'http://localhost:3005/api/v1'
-
-// export const fetchTodos = () => {
-//   let data = {
-//     method: 'GET',
-//     headers: {
-//       'Accept': 'application/json',
-//       'Content-Type': 'application/json',
-//       'Authorization': sessionStorage.jwt
-//     }
-//   }
-
-//   return dispatch => {
-//     fetch(`${ baseUrl }/todos`, data)
-//       .then(response => response.json())
-//       .then(todos => dispatch({
-//           type: 'FETCH_TODOS',
-//           payload: todos
-//       }))
-//       .catch(err => err)
-//   }
-// }

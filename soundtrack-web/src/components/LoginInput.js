@@ -18,16 +18,12 @@ import { withRouter } from 'react-router-dom'
 
     handleSubmit = (e) => {
         e.preventDefault()        
-        this.props.login(this.state, this.props.history.push('/entries'))
-        // debugger
-        
+        this.props.login(this.state, this.props.history.push('/entries'))       
     }
+    
     render() {
 
-        // if (this.state.session) {
-        //     return <Redirect to='/entries'/>
-        // }
-
+    
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>

@@ -27,6 +27,10 @@ class SessionsController < ApplicationController
        
     end
 
+    def destroy
+        render json: {logged_in: false }, status: 200
+    end
+
 
 end
 

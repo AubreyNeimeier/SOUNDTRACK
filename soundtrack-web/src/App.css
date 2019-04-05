@@ -22,8 +22,24 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+} 
+.art-background:hover .overlay {
+  opacity: 1;
 }
-
+.overlay {
+  position: relative; 
+  bottom: 100px; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 1064px;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
 .Nav-Bar-Item {
   font-size: 20px;
   padding: 10px;

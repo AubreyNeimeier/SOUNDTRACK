@@ -1,20 +1,38 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, withRouter} from 'react-router-dom'
+import { logout } from '../actions/sessionActions'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 const NavBar = (props) => {
-
+    
+    const handleClick = (e) => {
+        debugger
+        e.preventDefault()        
+        this.props.logout(this.props.history.push('/'))       
+    }
 
         return (
             <div className="Nav-Bar">
                 <NavLink to="/" className="Nav-Bar-Item" > Home </NavLink>
                 <NavLink to="/entries" className="Nav-Bar-Item" > Entries </NavLink>
                 <NavLink to="entries/new" className="Nav-Bar-Item" > New Entry </NavLink>
-                <NavLink to="/logout" className="Nav-Bar-Item" > Log Out </NavLink>   
-                <NavLink to="/about" className="Nav-Bar-Item" > About </NavLink>         
+                <NavLink to="/logout" className="Nav-Bar-Item" onClick={this.handleClick} > Log Out </NavLink>   
+                {/* <NavLink to="/about" className="Nav-Bar-Item" > About </NavLink>          */}
             </div> 
         )
     }
 
-export default NavBar
+    // const mapDispatchToProps = () => {
+    //     return{
+    //         logout:() => {
+    //             dispatch({type: 'LOGOUT'})
+    //         }
+            
+    //     }
+    // }
+    const mapDispatchToProps = dispatch => bindActionCreators({logout}, dispatch)
+
+export default withRouter(connect(null, mapDispatchToProps)(NavBar))
 // {props.entry.date} 
 // 
                 

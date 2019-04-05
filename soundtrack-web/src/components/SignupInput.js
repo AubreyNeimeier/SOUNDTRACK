@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import SoundtrackArt from './SoundtrackArt';
 import { signup } from '../actions/userActions'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
  class SignupInput extends Component{
  
@@ -48,5 +50,10 @@ import { signup } from '../actions/userActions'
 
 }
 
-export default SignupInput
+
+
+const mapDispatchToProps = dispatch => bindActionCreators({signup}, dispatch)
+
+export default connect(null, mapDispatchToProps)(SignupInput)
+
 //the current state(form values) is sent to postEntry, which is an action we imported. the action posts data and generates data with the create action, and entries db is updated

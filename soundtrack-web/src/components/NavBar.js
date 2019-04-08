@@ -16,7 +16,7 @@ class NavBar extends Component{
                 <NavLink to="/" className="Nav-Bar-Item" > Home </NavLink>
                 <NavLink to="/entries" className="Nav-Bar-Item" > Entries </NavLink>
                 <NavLink to="entries/new" className="Nav-Bar-Item" > New Entry </NavLink>
-                <NavLink className="Nav-Bar-Item" onClick={this.handleClick} > Log Out </NavLink>   
+                <NavLink to="" className="Nav-Bar-Item" onClick={this.handleClick} > Log Out </NavLink>   
                 {/* <NavLink to="/about" className="Nav-Bar-Item" > About </NavLink>          */}
             </div> 
         )

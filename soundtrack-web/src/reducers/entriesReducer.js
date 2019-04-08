@@ -3,7 +3,8 @@
 import cuid from 'cuid';
 export const cuidFn = cuid;
 const initialState = {
-    entries: []
+    entries: [],
+    session: ""
   }
   
   export default function entriesReducer(state = initialState, action) {
@@ -20,9 +21,12 @@ const initialState = {
 
       //   return newState 
 
-        case 'FETCH_ENTRIES':
+      case 'FETCH_ENTRIES':
          
           return {...state, entries: action.payload}
+
+        case 'SHOW_MY_ENTRIES':
+          return {...state, entries: action.payload, session: action.payload}
           
       default: return state
       
@@ -30,3 +34,4 @@ const initialState = {
     
   }
   //left of defining case and add_entry - need to combine reducers as well and define in index.js
+

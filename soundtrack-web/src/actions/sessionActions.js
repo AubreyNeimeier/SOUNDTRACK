@@ -17,11 +17,12 @@
             .then(response => response.json())
             .then(session_info => {
               dispatch({
-                type: 'LOGIN_WITH_CREDENTIALS',
+                type: 'SHOW_MY_ENTRIES',
                 payload: session_info.user
               })
-              //debugger
+              debugger
               if(session_info.logged_in) callback()
+            
             })
             // .then(dispatch(push('/entries')))
             .catch(err => err)

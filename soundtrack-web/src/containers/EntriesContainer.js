@@ -23,7 +23,7 @@ import NavBar from '../components/NavBar';
    
 
     render() {
-  
+        
         return (
             <div className="center-flex">
                 <NavBar />
@@ -41,7 +41,8 @@ import NavBar from '../components/NavBar';
 
 const mapStateToProps = (state) => {
     // debugger
-    return {entries: state.entries}
+    return {entries: state.entries, 
+            session: state.entries.session}
 
 }
 

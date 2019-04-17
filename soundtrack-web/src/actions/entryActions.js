@@ -21,15 +21,15 @@ export function fetchEntries(){
             entry_text: entry.entryContent
        })
     }  
-        // return dispatch => {
-        //     fetch(`http://localhost:3001/entries`, data)
-        //     .then(response => response.json())
-        //     .then(new_entry => dispatch({
-        //         type: 'CREATE_ENTRY',
-        //         payload: new_entry
-        //     }))
-        //     .catch(err => err)
-        // }
+        return dispatch => {
+            fetch(`http://localhost:3001/entries`, data)
+            .then(response => response.json())
+            .then(new_entry => dispatch({
+                type: 'CREATE_ENTRY',
+                payload: new_entry
+            }))
+            .catch(err => err)
+        }
         
     }
 

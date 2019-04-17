@@ -8,6 +8,8 @@ import EntryInput from '../components/EntryInput'
 import EntryListPreview from '../components/EntryListPreview'
 import SoundtrackArt from '../components/SoundtrackArt';
 import NavBar from '../components/NavBar';
+import { Route } from 'react-router-dom'
+
 
 // does fetchEntries import correctly? 
 
@@ -30,6 +32,7 @@ import NavBar from '../components/NavBar';
                 <NavBar />
                 <SoundtrackArt />
                 <EntryInput  createEntry={this.props.createEntry}/>
+                {/* <Route exact path="/entries/new" component={()=> <EntryInput createEntry={this.props.createEntry}/>}/> */}
                 {/* <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button > */}
                 <EntryListPreview entries={this.props.entries} /> 
                
@@ -48,6 +51,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => bindActionCreators({ createEntry }, dispatch)
 
-export default connect(mapStateToProps,mapDispatchToProps)(EntriesContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(EntriesContainer)
 
 {/* <Route path={`/fake/13`} render={routerProps => <EntryShow {...routerProps} entries={this.props.entries}/>}/> */}

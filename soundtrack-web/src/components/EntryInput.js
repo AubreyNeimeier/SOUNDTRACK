@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
- class EntryInput extends Component{
+ class EntryInput extends Component {
     state = {
         entryContent: "write your thoughts, memories, concerns, inspirations etc here...."
     }
@@ -16,7 +16,7 @@ import React, { Component } from 'react';
     handleSubmit = (e) => {
         e.preventDefault()
         
-        this.props.createEntry(this.state)
+        {this.props.createEntry(this.state)}
         this.setState({
             entryContent: " "
         })

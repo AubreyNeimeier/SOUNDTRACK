@@ -3,12 +3,10 @@
 import cuid from 'cuid';
 export const cuidFn = cuid;
 const initialState = {
-    entries: [],
-    session: ""
+    entries: []
   }
   
   export default function entriesReducer(state = initialState, action) {
-  
     switch(action.type) {
       // case 'ADD_ENTRY':
       // // debugger

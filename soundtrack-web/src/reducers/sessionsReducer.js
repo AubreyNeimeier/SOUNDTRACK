@@ -2,23 +2,21 @@
 
 
 
-  export default function sessionsReducer(state = {username: ""}, action) {
+  export default function sessionsReducer(state = [], action) {
     // debugger
-    switch(action.type) {
+    switch (action.type) {
       
-      case 'LOGIN_WITH_CREDENTIALS':
-        
-        return {username: action.payload.username}
-     
+      case 'LOGIN_WITH_CREDENTIALS':  
+        // var newState = Object.assign({}, state, {username: action.payload.username} ) 
+      
+        return [...state, {username: action.payload.username}]
+
       case 'LOGIN_WITH_OAUTH':
+        return state
 
-      // case 'LOGOUT':
-      //   return { session:[] }
-
-    default: return state
-      
+       default: 
+        return state   
     }
 
-    
   }
   //left off researching how to redirect in an action after proper authentication (session contains username)

@@ -12,19 +12,18 @@
             password: state.password
        })
     }  
-        return dispatch => {
-            fetch(`http://localhost:3001/sessions`, data)   
+        return (dispatch) => {
+            return fetch(`http://localhost:3001/sessions`, data)   
             .then(response => response.json())
             .then(session_info => {
-              dispatch({
+              return dispatch({
                 type: 'LOGIN_WITH_CREDENTIALS',
                 payload: session_info.user
               })
-              //debugger
+      
               if(session_info.logged_in) callback()
             })
-            // .then(dispatch(push('/entries')))
-            .catch(err => err)
+           
         }
     }
 

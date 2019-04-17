@@ -23,15 +23,16 @@ import NavBar from '../components/NavBar';
    
 
     render() {
-        
+       
         return (
+            
             <div className="center-flex">
                 <NavBar />
                 <SoundtrackArt />
                 <EntryInput  createEntry={this.props.createEntry}/>
                 {/* <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button > */}
                 <EntryListPreview entries={this.props.entries} /> 
-                
+               
                 
             </div>
         )
@@ -40,9 +41,8 @@ import NavBar from '../components/NavBar';
 }
 
 const mapStateToProps = (state) => {
-     debugger
-    return {entries: state.entries, 
-            session: state.entries.session}
+
+    return {entries: state.entries}
 
 }
 

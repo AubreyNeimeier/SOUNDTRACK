@@ -10,6 +10,7 @@ const EntryListPreview = (props) => {
         return (
             
             <div>
+                
                 <ul>
                 {entryList}
                 </ul>

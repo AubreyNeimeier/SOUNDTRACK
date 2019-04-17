@@ -17,42 +17,40 @@
             .then(response => response.json())
             .then(session_info => {
               dispatch({
-                type: 'SHOW_MY_ENTRIES',
+                type: 'LOGIN_WITH_CREDENTIALS',
                 payload: session_info.user
               })
-              debugger
+              //debugger
               if(session_info.logged_in) callback()
-            
             })
             // .then(dispatch(push('/entries')))
             .catch(err => err)
         }
-        
     }
 
-    export const logout = (callback) => {
+    // export const logout = (callback) => {
     
-      let data = {
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }
-      }  
-          return dispatch => {
-              fetch(`http://localhost:3001/logout`)   
-              .then(response => response.json())
-              .then(session_info => {
-                dispatch({
-                  type: 'LOGOUT',
-                })
-                if(!!session_info.logged_in) callback()
-              })
-              // .then(dispatch(push('/entries')))
-              .catch(err => err)
-          }
+    //   let data = {
+    //     method: 'GET',
+    //     headers: {
+    //       'Accept': 'application/json',
+    //       'Content-Type': 'application/json'
+    //     }
+    //   }  
+    //       return dispatch => {
+    //           fetch(`http://localhost:3001/logout`)   
+    //           .then(response => response.json())
+    //           .then(session_info => {
+    //             dispatch({
+    //               type: 'LOGOUT',
+    //             })
+    //             if(!!session_info.logged_in) callback()
+    //           })
+    //           // .then(dispatch(push('/entries')))
+    //           .catch(err => err)
+    //       }
           
-      }
+    //   }
     
 
 

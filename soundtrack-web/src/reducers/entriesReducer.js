@@ -25,8 +25,8 @@ const initialState = {
          
           return {...state, entries: action.payload}
 
-        case 'SHOW_MY_ENTRIES':
-          return {...state, entries: action.payload, session: action.payload}
+        // case 'SHOW_MY_ENTRIES':
+        //   return {...state, entries: action.payload, session: action.payload}
           
       default: return state
       

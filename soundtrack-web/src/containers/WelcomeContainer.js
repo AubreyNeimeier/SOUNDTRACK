@@ -35,8 +35,9 @@ class WelcomeContainer extends Component{
 }
 
 const mapStateToProps = (state) => {
-    return {}
-
+    
+    return {sessions: state.sessions}
+    debugger
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({login}, dispatch)

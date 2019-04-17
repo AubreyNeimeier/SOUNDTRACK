@@ -2,17 +2,18 @@
 
 
 
-  export default function sessionsReducer(state = {session: []}, action) {
-    
+  export default function sessionsReducer(state = {username: ""}, action) {
+    // debugger
     switch(action.type) {
       
       case 'LOGIN_WITH_CREDENTIALS':
         
-        return {...state, session: [...state.session, action.payload.username]}
+        return {username: action.payload.username}
+     
       case 'LOGIN_WITH_OAUTH':
 
-      case 'LOGOUT':
-        return { session:[] }
+      // case 'LOGOUT':
+      //   return { session:[] }
 
     default: return state
       

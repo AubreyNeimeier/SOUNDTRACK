@@ -40,7 +40,7 @@ import NavBar from '../components/NavBar';
 }
 
 const mapStateToProps = (state) => {
-    // debugger
+     debugger
     return {entries: state.entries, 
             session: state.entries.session}
 

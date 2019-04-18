@@ -27,7 +27,7 @@ import { Route } from 'react-router-dom'
     render() {
        
         return (
-            
+        
             <div className="center-flex">
                 <NavBar />
                 <SoundtrackArt />

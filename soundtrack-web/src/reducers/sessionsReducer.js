@@ -3,7 +3,7 @@
 
 
   export default function sessionsReducer(state = [], action) {
-    // debugger
+     debugger
     switch (action.type) {
       
       case 'LOGIN_WITH_CREDENTIALS':  

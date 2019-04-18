@@ -26,7 +26,7 @@ class App extends Component {
             <Route exact path="/" component={WelcomeContainer} />
             <Route exact path="/about" component={About} />
             <Route exact path="/signup" component={SignupInput} />
-            <Route exact path="/entries" render={() => <EntriesContainer entries={this.props.entries}/> }/>
+            <Route exact path="/entries" render={() => <EntriesContainer entries={this.props.entries} user={this.props.sessions}/> }/>
             <Route exact path="/entries/new" render={(props)=> <EntryInput {...props}/>}/>
             <Route exact path={`/entries/:entryId`} render={routerProps => <EntryShow {...routerProps} entries={this.props.entries} />}/>
             <Route exact path="/logout" />
@@ -41,8 +41,9 @@ class App extends Component {
 
 
 const mapStateToProps = (state) => {
-
-  return {entries: state.entries}
+  //pass user login info to props here for entries container 
+  return {entries: state.entries, 
+          sessions: state.sessions}
 
 }
 

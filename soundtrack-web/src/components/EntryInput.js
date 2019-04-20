@@ -3,14 +3,13 @@ import React, { Component } from 'react';
 
  class EntryInput extends Component {
     state = {
-        entryContent: "write your thoughts, memories, concerns, inspirations etc here....",
-        cloudContent: "write your cloud thoughts here"
+        entryContent: "write your thoughts, memories, concerns, inspirations etc after completing your morning pages.",
+        cloudContent: '"Morning Pages are three pages of longhand, stream of consciousness writing done first thing in the morning. *There is no wrong way to do Morning Pages they are not high art. They are not even “writing. They are about anything and everything that crosses your mind– and they are for your eyes only. Morning Pages provoke, clarify, comfort, cajole, prioritize and synchronize the day at hand. Do not over-think Morning Pages: just put three pages of anything on the page...and then do three more pages tomorrow." - Julia Cameron'
     }
 
     handleChange = (e) => {
         this.setState({
-            entryContent: e.target.value,
-            cloudContent: e.target.value
+            [e.target.name]: e.target.value
         })
 
     }
@@ -37,7 +36,7 @@ import React, { Component } from 'react';
             <div>
                 <div className="right-flex">
                     <form onSubmit={this.handleSubmitCloud}>
-                            <label className="center-flex"> New Entry </label>
+                            <label className="center-flex"> Morning Pages </label>
                             <textarea type="text" rows="10" name="cloud" cols="50" value={this.state.cloudContent} onChange={this.handleChange}/><br></br>
                             <input className="entry-button" type="submit" value="Declutter" />
                     </form>

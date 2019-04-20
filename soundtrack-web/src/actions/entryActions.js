@@ -33,12 +33,12 @@ export function fetchEntries(){
         
     }
 
-  // export const addEntry = (entry) => {
-  //   return {
-  //     type: "ADD_ENTRY", 
-  //     entry
-  //   }
-  // }
+  export const createCloud = (cloud) => {
+    return {
+      type: "CREATE_CLOUD", 
+      cloud
+    }
+  }
 
 
 

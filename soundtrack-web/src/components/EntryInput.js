@@ -26,7 +26,6 @@ import React, { Component } from 'react';
 
     handleSubmitCloud = (e) => {
         e.preventDefault()
-        
         {this.props.createCloud(this.state)}
         this.setState({
             cloudContent: " "
@@ -40,7 +39,7 @@ import React, { Component } from 'react';
                     <form onSubmit={this.handleSubmitCloud}>
                             <label className="center-flex"> New Entry </label>
                             <textarea type="text" rows="10" name="cloud" cols="50" value={this.state.cloudContent} onChange={this.handleChange}/><br></br>
-                            <input className="entry-button" type="submit" value="Save" />
+                            <input className="entry-button" type="submit" value="Declutter" />
                     </form>
                 </div>  
 

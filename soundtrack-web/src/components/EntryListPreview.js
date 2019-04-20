@@ -7,12 +7,15 @@ const EntryListPreview = (props) => {
 
 
         const entryList = props.entries.entries.map(entry => <EntryPreview entry={entry} key={entry.id} />)
+        const cloudList = props.clouds.map(cloud => <li> {cloud} </li>)
         return (
             
             <div>
-                
                 <ul>
-                {entryList}
+                    {cloudList}
+                </ul>
+                <ul>
+                    {entryList}
                 </ul>
                 
             </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { createEntry } from '../actions/entryActions';
+import { createEntry, createCloud } from '../actions/entryActions';
 import EntryInput from '../components/EntryInput'
 
 import EntryListPreview from '../components/EntryListPreview'
@@ -25,7 +25,7 @@ import { Route } from 'react-router-dom'
    
 
     render() {
-        debugger
+        
         return (
 
             <div>
@@ -34,10 +34,10 @@ import { Route } from 'react-router-dom'
                 <div className="center-flex">
                     <NavBar />
                     <SoundtrackArt />
-                    <EntryInput  createEntry={this.props.createEntry}/>
+                    <EntryInput  createEntry={this.props.createEntry} createCloud={this.props.createCloud}/>
                     {/* <Route exact path="/entries/new" component={()=> <EntryInput createEntry={this.props.createEntry}/>}/> */}
                     {/* <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button > */}
-                    <EntryListPreview entries={this.props.entries} /> 
+                    <EntryListPreview entries={this.props.entries} clouds={this.props.entries.clouds}/> 
                 
                     
                 </div>
@@ -53,7 +53,7 @@ const mapStateToProps = (state) => {
 
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ createEntry }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ createEntry, createCloud }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(EntriesContainer)
 

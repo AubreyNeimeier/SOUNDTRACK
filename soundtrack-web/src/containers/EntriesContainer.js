@@ -25,18 +25,22 @@ import { Route } from 'react-router-dom'
    
 
     render() {
-       
+        debugger
         return (
-        
-            <div className="center-flex">
-                <NavBar />
-                <SoundtrackArt />
-                <EntryInput  createEntry={this.props.createEntry}/>
-                {/* <Route exact path="/entries/new" component={()=> <EntryInput createEntry={this.props.createEntry}/>}/> */}
-                {/* <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button > */}
-                <EntryListPreview entries={this.props.entries} /> 
-               
+
+            <div>
+                {/* <h1> Welcome {this.props.user.username} </h1> */}
+            
+                <div className="center-flex">
+                    <NavBar />
+                    <SoundtrackArt />
+                    <EntryInput  createEntry={this.props.createEntry}/>
+                    {/* <Route exact path="/entries/new" component={()=> <EntryInput createEntry={this.props.createEntry}/>}/> */}
+                    {/* <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button > */}
+                    <EntryListPreview entries={this.props.entries} /> 
                 
+                    
+                </div>
             </div>
         )
     }

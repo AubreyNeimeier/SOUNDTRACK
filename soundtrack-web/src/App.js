@@ -18,7 +18,7 @@ class App extends Component {
     }
 
   render() {
-
+// debugger
     return (
       
         <div className="app"> 
@@ -43,8 +43,8 @@ class App extends Component {
 const mapStateToProps = (state) => {
   //pass user login info to props here for entries container 
   return {entries: state.entries, 
-          sessions: state.sessions}
-
+          sessions: state.sessions[0]}
+          
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({fetchEntries}, dispatch)

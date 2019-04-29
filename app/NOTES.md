@@ -37,6 +37,9 @@ REQUIREMENTS
         - EntryShow
         - EntryListPreview
         - EntryPreview
+        - About
+        - NavBar
+        - SoundtrackArt
     - 3 Routes
         - '/'
         - '/entries' 

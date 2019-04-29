@@ -7,7 +7,7 @@ import { login } from '../actions/sessionActions';
 
 import LoginInput from '../components/LoginInput'
 
-import About from '../components/About'
+
 import { NavLink } from 'react-router-dom'
 import SoundtrackArt from '../components/SoundtrackArt';
 

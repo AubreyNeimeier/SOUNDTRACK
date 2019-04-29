@@ -24,7 +24,7 @@ import React, { Component } from 'react';
     handleSubmitEntry = (e) => {
         e.preventDefault()
         
-        {this.props.createEntry(this.state)}
+        this.props.createEntry(this.state)
         this.setState({
             entryContent: " "
         })

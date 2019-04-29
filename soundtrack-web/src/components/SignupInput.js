@@ -23,6 +23,7 @@ import { bindActionCreators } from 'redux'
     handleSubmit = (e) => {
         e.preventDefault()        
         this.props.signup(this.state)
+        this.props.history.push('/entries')
         // debugger
         // if(this.state.session){
         //     history.push('/entries')
@@ -33,7 +34,7 @@ import { bindActionCreators } from 'redux'
         return (
             <div>
                     <SoundtrackArt />
-                <div class="center-flex">
+                <div className="center-flex">
                     <p> Sign Up to save journal entries </p>
                     <form onSubmit={this.handleSubmit}>
                             <label>Username</label><input type="text"  name="username" onChange={this.handleChange}/>

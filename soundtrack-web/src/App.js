@@ -9,13 +9,16 @@ import { fetchEntries } from './actions/entryActions';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import SignupInput from './components/SignupInput'
-import EntryInput from './components/EntryInput'
-import { BrowserRouter, Route, withRouter, Switch } from 'react-router-dom'
+
+import { Route, withRouter, Switch } from 'react-router-dom'
 
 class App extends Component {
- componentDidMount = () => {
+
+    componentDidMount = () => {
         this.props.fetchEntries()
     }
+
+    
 
   render() {
 // debugger

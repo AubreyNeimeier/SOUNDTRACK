@@ -8,7 +8,6 @@ import EntryInput from '../components/EntryInput'
 import EntryListPreview from '../components/EntryListPreview'
 import SoundtrackArt from '../components/SoundtrackArt';
 import NavBar from '../components/NavBar';
-import { Route } from 'react-router-dom'
 
 
 // does fetchEntries import correctly? 
@@ -27,21 +26,15 @@ import { Route } from 'react-router-dom'
     render() {
         
         return (
-
-            <div>
-                {/* <h1> Welcome {this.props.user.username} </h1> */}
-            
                 <div className="center-flex">
                     <NavBar />
                     <SoundtrackArt />
                     <EntryInput  createEntry={this.props.createEntry} createCloud={this.props.createCloud}/>
                     {/* <Route exact path="/entries/new" component={()=> <EntryInput createEntry={this.props.createEntry}/>}/> */}
                     {/* <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button > */}
-                    <EntryListPreview entries={this.props.entries} clouds={this.props.entries.clouds}/> 
-                
-                    
+                    <EntryListPreview entries={this.props.entries} clouds={this.props.entries.clouds}/>                     
                 </div>
-            </div>
+
         )
     }
 

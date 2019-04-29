@@ -20,7 +20,7 @@
                 type: 'LOGIN_WITH_CREDENTIALS',
                 payload: session_info.user
               })
-              if(session_info.logged_in == true) callback()
+              if(session_info.logged_in === true) callback()
             })
            
         }

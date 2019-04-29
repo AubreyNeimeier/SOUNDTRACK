@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { NavLink, withRouter} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 // import { logout } from '../actions/sessionActions'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
+
 class NavBar extends Component{
     
     // handleClick = (e) => {

@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 
 const EntryShow = ( {match, entries} ) => {
     const id = Number(match.params.entryId)
-    const entry = entries.entries.find(obj => obj.id == id)
+    const entry = entries.entries.find(obj => obj.id === id)
     
    return(
        <div>

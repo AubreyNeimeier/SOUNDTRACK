@@ -24,10 +24,7 @@ import { bindActionCreators } from 'redux'
         e.preventDefault()        
         this.props.signup(this.state)
         this.props.history.push('/entries')
-        // debugger
-        // if(this.state.session){
-        //     history.push('/entries')
-        // }
+     
     }
     render() {
 

@@ -15,9 +15,6 @@ import SoundtrackArt from '../components/SoundtrackArt';
 
 class WelcomeContainer extends Component{
 
-// handleChange = () => {
-//     this.props.fetchEntries()
-// }
 
 
     render() {
@@ -33,11 +30,6 @@ class WelcomeContainer extends Component{
     }
 
 }
-
-// const mapStateToProps = (state) => {
-//     return {}
-
-// }
 
 const mapDispatchToProps = dispatch => bindActionCreators({login}, dispatch)
 

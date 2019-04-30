@@ -10,16 +10,7 @@ const initialState = {
   export default function entriesReducer(state = initialState, action) {
    
     switch(action.type) {
-      // case 'ADD_ENTRY':
-      // // debugger
-      //   const new_entry = {
-      //       cuid: cuid(),
-      //       date: new Date().toUTCString(),
-      //       entry_text: action.entry
-      //   }
-      //   let newState = {...state, entries: [...state.entries, new_entry]}
-
-      //   return newState 
+      
 
       case 'FETCH_ENTRIES':
          

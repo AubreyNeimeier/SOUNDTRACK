@@ -14,12 +14,7 @@ import React, { Component } from 'react';
 
     }
 
-    // handleChangeCloud = (e) => {
-    //     this.setState({
-    //         cloudContent: e.target.value
-    //     })
-
-    // }
+  
 
     handleSubmitEntry = (e) => {
         e.preventDefault()

@@ -10,18 +10,10 @@ import SoundtrackArt from '../components/SoundtrackArt';
 import NavBar from '../components/NavBar';
 
 
-// does fetchEntries import correctly? 
+
 
  class EntriesContainer extends Component{
 
-    // componentDidMount = () => {
-    //     this.props.fetchEntries()
-    // }
-    
-    // handleChange = () => {
-    //     this.props.fetchEntries()
-    // }
-   
 
     render() {
         
@@ -30,8 +22,7 @@ import NavBar from '../components/NavBar';
                     <NavBar />
                     <SoundtrackArt />
                     <EntryInput  createEntry={this.props.createEntry} createCloud={this.props.createCloud}/>
-                    {/* <Route exact path="/entries/new" component={()=> <EntryInput createEntry={this.props.createEntry}/>}/> */}
-                    {/* <button onClick={this.handleChange}>CLICK HERE FOR ENTRY LIST</button > */}
+                    
                     <EntryListPreview entries={this.props.entries} clouds={this.props.entries.clouds}/>                     
                 </div>
 
@@ -50,4 +41,3 @@ const mapDispatchToProps = dispatch => bindActionCreators({ createEntry, createC
 
 export default connect(mapStateToProps, mapDispatchToProps)(EntriesContainer)
 
-{/* <Route path={`/fake/13`} render={routerProps => <EntryShow {...routerProps} entries={this.props.entries}/>}/> */}

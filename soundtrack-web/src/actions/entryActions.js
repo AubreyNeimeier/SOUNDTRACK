@@ -9,6 +9,7 @@ export function fetchEntries(){
   }
 
   export const createEntry = entry => {
+    console.log('C')
     let data = {
       method: 'POST',
       headers: {
@@ -24,13 +25,15 @@ export function fetchEntries(){
         return dispatch => {
             fetch(`http://localhost:3001/entries`, data)
             .then(response => response.json())
-            .then(new_entry => dispatch({
+            .then(new_entry => {
+              console.log('D')
+              dispatch({
                 type: 'CREATE_ENTRY',
                 payload: new_entry
-            }))
+            })})
             .catch(err => err)
         }
-        
+        console.log('E')
     }
 
   export const createCloud = (cloud) => {
